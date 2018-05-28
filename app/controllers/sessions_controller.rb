@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    return head(:forbidden) unless session.include? :name
+    binding.pry
     session
   end
 end
