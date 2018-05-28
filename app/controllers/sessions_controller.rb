@@ -1,3 +1,5 @@
+require 'pry'
+
 class SessionsController < ApplicationController
 
 
@@ -7,5 +9,6 @@ class SessionsController < ApplicationController
 
   def create
     return head(:forbidden) unless session.include? :name
+    session
   end
 end
